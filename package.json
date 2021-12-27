@@ -1,0 +1,22 @@
+{
+  "name": "e-commerce-mern",
+  "version": "1.0.0",
+  "description": "MERN shopping cart app",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aniemmanuelrapoo/Pro-shop-MERN.git"
+  },
+  "author": "Ani Emmanuel Rapoo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aniemmanuelrapoo/Pro-shop-MERN/issues"
+  },
+  "homepage": "https://github.com/aniemmanuelrapoo/Pro-shop-MERN#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
