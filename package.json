@@ -4,7 +4,10 @@
   "description": "MERN shopping cart app",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon backend/server"
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix myapp",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -18,5 +21,9 @@
   "homepage": "https://github.com/aniemmanuelrapoo/Pro-shop-MERN#readme",
   "dependencies": {
     "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.5.1",
+    "nodemon": "^2.0.15"
   }
 }
