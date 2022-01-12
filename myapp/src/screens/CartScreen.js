@@ -10,6 +10,8 @@ const CartScreen = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
+    
+
     const qty = location.search ? Number(location.search.split('=')[1]) : 1
     const dispatch = useDispatch()
 
