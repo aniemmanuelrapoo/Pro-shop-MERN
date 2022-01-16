@@ -4,6 +4,7 @@ import { Form, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import FormContainer from '../components/FormContainer'
 import { saveShippingAddress } from '../actions/cartActions'
+import CheckoutSteps from '../components/CheckoutSteps'
 
 const ShippingScreen = () => {
     const cart = useSelector(state => state.cart)
@@ -25,13 +26,13 @@ const ShippingScreen = () => {
     }
     return (
         <FormContainer>
+            <CheckoutSteps step1 step2 />
             <h1>Shipping</h1>
             <Form onSubmit={submitHandler}>
                  <Form.Group controlId='address' className="mb-3">
                     <Form.Label>Address</Form.Label>
                     <Form.Control type='text' placeholder='Enter Address' value={address} required onChange={(e) => setAddress(e.target.value)}></Form.Control>
                 </Form.Group>
-
                 <Form.Group controlId='city' className="mb-3">
                     <Form.Label>City</Form.Label>
                     <Form.Control type='text' placeholder='Enter City' value={city} required onChange={(e) => setCity(e.target.value)}></Form.Control>
