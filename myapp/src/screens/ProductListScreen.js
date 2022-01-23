@@ -9,8 +9,8 @@ import { listProducts, deleteProduct, createProduct } from '../actions/productAc
 import { PRODUCT_CREATE_REST } from '../constants/productConstants'
 
 const ProductListScreen = () => {
-    // const dispatch = useDispatch()
-    // const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const productList = useSelector(state => state.productList)
     const { products, error, loading } = productList
