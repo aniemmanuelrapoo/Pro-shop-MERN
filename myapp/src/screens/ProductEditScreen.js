@@ -42,7 +42,7 @@ const ProductEditScreen = () => {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        // update product
+        // update product here
     }
     
     return (
