@@ -71,7 +71,7 @@ const ProductEditScreen = () => {
             <FormContainer>
                 <h1>Edit Product</h1>
                 {loadingUpdate && <Loader />}
-                {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}}
+                {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
                 {loading ? <Loader /> : error ? <Message variant='danger'>{error}</Message> : (
                     <Form onSubmit={submitHandler}>
                         <Form.Group controlId='name' className="mb-3">
