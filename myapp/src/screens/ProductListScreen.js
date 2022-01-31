@@ -26,7 +26,12 @@ const ProductListScreen = () => {
 
     useEffect(() => {
         dispatch({ type: PRODUCT_CREATE_REST })
-        if(!userInfo.isAdmin){
+        // if(!userInfo.isAdmin){
+        //     navigate('/login')
+        // }
+        if(userInfo && userInfo.isAdmin){
+            dispatch(listProducts())
+        }else{
             navigate('/login')
         }
 
