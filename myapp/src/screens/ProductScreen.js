@@ -151,9 +151,7 @@ const ProductScreen = () => {
 
                                                 <option value='3'>4 - Good</option>
 
-
                                                 <option value='4'>4 - Very Good</option>
-
 
                                                 <option value='5'>5 - Excellent</option>
                                             </Form.Control>
