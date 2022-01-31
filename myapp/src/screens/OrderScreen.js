@@ -68,7 +68,7 @@ const OrderScreen = () => {
     }, [dispatch, id, successPay, order, successDeliver, userInfo, navigate])
 
     const successPaymentHandler = (paymentResult) => {
-        console.log(paymentResult)
+        // console.log(paymentResult)
         dispatch(payOrder(id, paymentResult))
     }
 
