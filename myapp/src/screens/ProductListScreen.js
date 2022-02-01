@@ -5,15 +5,18 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
+import Paginate from '../components/Paginate'
 import { listProducts, deleteProduct, createProduct } from '../actions/productActions'
 import { PRODUCT_CREATE_REST } from '../constants/productConstants'
+import { useParams } from 'react-router-dom'
 
 const ProductListScreen = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
+    const { pageNumber } = useParams() || 1
 
     const productList = useSelector(state => state.productList)
-    const { products, error, loading } = productList
+    const { products, error, loading, page, pages } = productList
 
     const productDelete = useSelector(state => state.productDelete)
     const { error: errorDelete, loading: loadingDelete, success: successDelete } = productDelete
@@ -38,9 +41,9 @@ const ProductListScreen = () => {
         if(successCreate){
             navigate(`/admin/product/${createdProduct._id}/edit`)
         }else{
-            dispatch(listProducts())
+            dispatch(listProducts('', pageNumber))
         }
-    }, [dispatch, navigate, userInfo, successDelete, successCreate, createdProduct])
+    }, [dispatch, navigate, userInfo, successDelete, successCreate, createdProduct, pageNumber])
 
     const deleteHandler = (id) => {
         if(window.confirm('Are you sure')){
@@ -70,6 +73,7 @@ const ProductListScreen = () => {
             {errorCreate && <Message variant='danger'>{errorCreate}</Message>}
 
             {loading ? <Loader /> : error ? <Message variant='danger'>{error}</Message> : (
+                <>
                 <Table striped bordered hover responsive className='table-sm'>
                     <thead>
                         <tr>
@@ -108,6 +112,8 @@ const ProductListScreen = () => {
                         ))}
                     </tbody>
                 </Table>
+                <Paginate pages={pages} page={page} isAdmin={true} />
+                </>
             )}
         </>
     )
