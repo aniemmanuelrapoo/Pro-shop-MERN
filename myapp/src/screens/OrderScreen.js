@@ -162,11 +162,13 @@ const OrderScreen = () => {
                                 <Col>${order.totalPrice}</Col>
                             </Row>
                         </ListGroup.Item>
+
                         <ListGroup.Item>
                             <Row>
                                 <a href='/' className='btn btn-light col-12'>Go Back</a>
                             </Row>
                         </ListGroup.Item>
+                        
                         {!order.isPaid && (
                             <ListGroup.Item>
                                 {loadingPay && <Loader />}
