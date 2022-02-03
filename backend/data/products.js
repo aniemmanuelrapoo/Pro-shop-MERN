@@ -9,7 +9,7 @@ const products = [
     price: 89.99,
     countInStock: 10,
     rating: 4.5,
-    numReviews: 12,
+    numReviews: 5,
   },
   {
     name: 'iPhone 11 Pro 256GB Memory',
@@ -20,7 +20,7 @@ const products = [
     category: 'Electronics',
     price: 599.99,
     countInStock: 7,
-    rating: 4.0,
+    rating: 5,
     numReviews: 8,
   },
   {
@@ -33,7 +33,7 @@ const products = [
     price: 929.99,
     countInStock: 5,
     rating: 3,
-    numReviews: 12,
+    numReviews: 4,
   },
   {
     name: 'Sony Playstation 4 Pro White Version',
@@ -45,7 +45,7 @@ const products = [
     price: 399.99,
     countInStock: 11,
     rating: 5,
-    numReviews: 12,
+    numReviews: 8,
   },
   {
     name: 'Logitech G-Series Gaming Mouse',
@@ -57,7 +57,7 @@ const products = [
     price: 49.99,
     countInStock: 7,
     rating: 3.5,
-    numReviews: 10,
+    numReviews: 5,
   },
   {
     name: 'Amazon Echo Dot 3rd Generation',
@@ -69,7 +69,55 @@ const products = [
     price: 29.99,
     countInStock: 0,
     rating: 4,
-    numReviews: 12,
+    numReviews: 7,
+  },
+  {
+    name: 'Oculus Quest 2, Virtual Reality Headset, 128 GB',
+    image: '/images/oculus.jpg',
+    description:
+      'Next-level Hardware - Make every move count with a blazing-fast processor and our highest-resolution display',
+    brand: 'Amazon',
+    category: 'Electronics',
+    price: 299.99,
+    countInStock: 5,
+    rating: 4.5,
+    numReviews: 5,
+  },
+  {
+    name: 'Apple 20W USB-C Power Adapter',
+    image: '/images/appleada.jpg',
+    description:
+      'The Apple 20W USB-C Power Adapter offers fast, efficient charging at home, in the office, or on the go. You can also pair it with iPhone 8 or later to take advantage of the fast-charging feature.',
+    brand: 'Amazon',
+    category: 'Electronics',
+    price: 70.99,
+    countInStock: 6,
+    rating: 4,
+    numReviews: 3,
+  },
+  {
+    name: 'Wyze Cam v3 with Color Night Vision',
+    image: '/images/wyze.jpg',
+    description:
+      'Color night vision: An all-new Starlight Sensor records night time video in full, vivid color. The Starlight Sensor can see full color in environments up to 25x darker than traditional video cameras',
+    brand: 'Amazon',
+    category: 'Electronics',
+    price: 35.98,
+    countInStock: 4,
+    rating: 3,
+    numReviews: 3,
+  },
+  {
+    name: 'Ailun Glass Screen Protector',
+    image: '/images/glass.jpg',
+    description:
+      'WORKS FOR iPhone 13/13 Pro 6.1 Inch Display Screen 2021 0.33mm tempered glass screen protector. Featuring maximum protection from scratches, scrapes, and bumps.',
+    brand: 'Amazon',
+    category: 'Electronics',
+    price: 7.98,
+    countInStock: 8,
+    rating: 3,
+    numReviews: 3,
   },
 ]
 
