@@ -57,11 +57,11 @@ const OrderListScreen = () => {
                                 <td>{order.isDelivered ? order.deliveredAt.substring(0, 10) : <i className='fas fa-times' style={{color: 'red'}}></i>}</td>
 
                                 <td>
-                                    <Link to={`/order/${order._id}`}>
+                                    <a href={`/order/${order._id}`}>
                                         <Button variant='light' className='btn-sm'>
                                             Details
                                         </Button>
-                                    </Link>
+                                    </a>
                                 </td>
                             </tr>
                         ))}
